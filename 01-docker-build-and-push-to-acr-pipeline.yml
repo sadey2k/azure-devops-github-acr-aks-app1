@@ -5,6 +5,8 @@
 trigger:
 - master
 
+pool: 'TestAgentPool'
+
 resources:
 - repo: self
 
@@ -16,7 +18,7 @@ variables:
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
 
-pool: 'TestAgentPool'
+
 
 stages:
 - stage: Build
